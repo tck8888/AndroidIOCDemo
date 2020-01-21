@@ -11,11 +11,7 @@ public class MyButterKnife {
             Class<?> viewBinderClass = Class.forName(className);
             ViewBinder viewBinder = (ViewBinder) viewBinderClass.newInstance();
             viewBinder.bind(activity);
-        } catch (ClassNotFoundException e) {
-            e.printStackTrace();
-        } catch (IllegalAccessException e) {
-            e.printStackTrace();
-        } catch (InstantiationException e) {
+        } catch (ClassNotFoundException | IllegalAccessException | InstantiationException e) {
             e.printStackTrace();
         }
 
