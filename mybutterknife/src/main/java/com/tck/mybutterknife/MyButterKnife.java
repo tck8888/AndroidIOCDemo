@@ -4,14 +4,9 @@ import android.app.Activity;
 
 public class MyButterKnife {
 
+    public static void bind(Activity activity) {
 
-
-
-    public static void bind(Activity activity){
-
-
-        String className = activity.getClass().getName()+"$ViewBinder";
-
+        String className = activity.getClass().getName() + "$ViewBinder";
         try {
             Class<?> viewBinderClass = Class.forName(className);
             ViewBinder viewBinder = (ViewBinder) viewBinderClass.newInstance();

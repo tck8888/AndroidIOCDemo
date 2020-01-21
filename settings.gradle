@@ -1,2 +1,2 @@
-include ':app', ':mybutterknife'
+include ':app', ':mybutterknife', ':libcommon'
 rootProject.name='AndroidIOCDemo'
